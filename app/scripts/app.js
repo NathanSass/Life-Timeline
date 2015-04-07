@@ -1,6 +1,6 @@
 (function (window, undefined) {
   'use strict';
-  var imagePath = 'app/images/'
+  var imagePath = 'app/images/';
   var templateData = [
     { age: '0.0000',
       desc: 'I was born. The world has not been the same since.'
