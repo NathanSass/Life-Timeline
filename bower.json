@@ -1,0 +1,14 @@
+{
+  "name": "homesite",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "jQuery": "~1.11.1",
+    "normalize-scss": "~3.0.1",
+    "ractive": "~0.5.5"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4"
+  }
+}

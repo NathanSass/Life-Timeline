@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>homeSite</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" href="images/font-awesome-4.3.0/css/font-awesome.min.css">
+    
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endinject -->
+
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> to
+      improve your experience.</p>
+    <![endif]-->
+
+    <h1 class="my-name">Nathan Sass</h1>
+    <div id="top" class="bio">
+      <p class="bio-text">
+        <span class="first-phrase">Born in Saskatoon.</span> Studied Architecture. Quit. Moved to the west coast. Dancing and kayaking.
+      </p>
+    </div>
+    <div class="first-breaker">
+      <img class="image-piece" style="-webkit-user-select: none" src="https://blog.adafruit.com/wp-content/uploads/2013/02/tumblr_mipzbzlB911qfjvexo1_r1_500.gif">
+      <div class="solid-piece"></div>
+    </div>
+
+    <div class="timeline-blurb">
+      <p>Keyframed events in my life by chronological age.</p>
+    </div>
+    
+    <div id="timeline" class="timeline">
+    </div>
+    
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#top"><i class="fa fa-connectdevelop"></i></a></li>
+        <li><a href="#footer"><i class="fa fa-cube"></i></a></li>
+        <li><a href="#"><i class="fa fa-diamond"></i></a></li>
+
+
+        <!-- <li><a><i class="fa fa-github"></i></a></li>
+        <li><a><i class="fa fa-github"></i><</i></a></li> -->
+      </ul>
+    </nav>
+
+    <footer id="footer">
+      <div class="top-slant-piece"></div>
+      <div class="main-footer">
+        <div class="footer-content">
+          <div class="contact">
+            <div class="contact-header">Contact</div>
+            <ul class="icon-list">
+              <li><a><i class="fa fa-github"></i></a></li>
+              <li><a><i class="fa fa-envelope-o"></i></a></li>
+              <li><a><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="final-footer">
+            <p>&copy; Nathan Sass 2014</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script id='template' type='text/ractive'>
+    <ul class="timeline-list">
+    {{#each timelineItem}}
+      <li class="timeline-item"><a class="js-age age">{{age}}</a>
+        <div class="timeline-content">
+          {{#if img}}
+            {{#each img}}
+              <img src={{.}}>
+            {{/each}}
+          {{/if}}
+          {{#if desc}}
+            <p class="desc">
+              {{desc}}
+            </p>
+          {{/if}}
+        </div>
+      </li>
+    {{/each}}
+    </ul>
+    </script>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jQuery/dist/jquery.js"></script>
+    <script src="bower_components/ractive/ractive.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/app.js -->
+    <!-- // <script src="scripts/app.js"></script> -->
+    <!-- generator:ractive script -->
+    <!-- endbuild -->
+
+    <!-- inject:js -->
+    <script src="scripts/app.js"></script>
+    <!-- endinject -->
+
+  </body>
+</html>
