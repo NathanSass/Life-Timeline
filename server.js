@@ -6,11 +6,7 @@
   var app = express();
 
 
-
-  app.use(reloader());
-  app.use(express.static('./app'));
   app.use(express.static('.'));
-
 
   app.listen(9000, function(){
     console.log('App Listening on localhost:9000');

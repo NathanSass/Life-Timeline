@@ -3,7 +3,7 @@
   var $     = require('gulp-load-plugins')({lazy:false});
 
 var paths = {
-  index: './app/index.html',
+  index: './index.html',
   root: './app',
   html: './app/**/*.html',
   scripts: './app/scripts/**/*.js',
@@ -45,7 +45,7 @@ function startInject(){
   return target
     .pipe( $.inject( scripts,  {relative:true}) )
     .pipe( $.inject( styles,  {relative:true}) )
-    .pipe( gulp.dest( paths.root ) );
+    .pipe( gulp.dest( './' ) );
 }
 
 })();
