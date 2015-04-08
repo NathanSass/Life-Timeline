@@ -86,16 +86,24 @@ body {
   }
   .timeline-item {
     .age {
+      color: rgb(219, 219, 219);
       font-size: 2.5em;
       font-weight: 600;
-      color: rgb(219, 219, 219);
-      &:hover, &.focus {
+      text-decoration: none;
+      &:hover {
         color: #9E9E9E;
       }
     }
     &.focus {
       .timeline-content {
         display: block;
+        // visibility: visible;
+        opacity: 1;
+        transition: opacity 3s;
+
+      }
+      .age {
+        color: #9E9E9E;
       }
     }
   }
@@ -104,9 +112,12 @@ body {
 
 .timeline-content {
   display: none;
+  // visibility: hidden;
+  opacity: 0;
   position: relative;
   right: -30vw;
   width: 70vw;
+  transition: opacity 3s;
   img {
     width: 70vw;
   }

@@ -13,7 +13,7 @@
     <!-- endbuild -->
     <!-- build:css styles/app.css -->
     <link rel="stylesheet" href="app/images/font-awesome-4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="bower_components/normalize-scss/_normalize.scss">
+    <!-- <link rel="stylesheet" href="bower_components/normalize-scss/_normalize.scss"> -->
 
     
     <!-- inject:css -->
@@ -29,11 +29,10 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a> to
       improve your experience.</p>
     <![endif]-->
-
     <h1 class="my-name">Nathan Sass</h1>
     <div id="top" class="bio">
       <p class="bio-text">
-        <span class="first-phrase">Born in Saskatoon.</span> Studied Architecture. Quit. Moved to the west coast. Dancing and kayaking.
+        <span class="first-phrase" name="top">Born in Saskatoon.</span> Studied Architecture. Quit. Moved to the west coast. Dancing and kayaking.
       </p>
     </div>
     <div class="first-breaker">
@@ -82,7 +81,7 @@
     <script id='template' type='text/ractive'>
     <ul class="timeline-list">
     {{#each timelineItem}}
-      <li class="timeline-item"><a class="js-age age">{{age}}</a>
+      <li class="timeline-item"><a href="#" class="js-age age">{{age}}</a>
         <div class="timeline-content">
           {{#if img}}
             {{#each img}}

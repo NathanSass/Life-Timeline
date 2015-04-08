@@ -2,7 +2,7 @@
   'use strict';
   var imagePath = 'app/images/';
   var templateData = [
-    { age: '0.0000',
+    { age: '0.0001',
       desc: 'I was born. The world has not been the same since.'
     },
     { age: '2.4543',
@@ -48,7 +48,7 @@
   var ractive = new Ractive({
     el: 'timeline',
     template: '#template',
-    data: { timelineItem: templateData}
+    data: { timelineItem: templateData},
   });
 
   var DOM = {
@@ -60,6 +60,16 @@
     $('.timeline-item').removeClass('focus');
     DOM.$timelineItem = $(e.target).closest('li');
     DOM.$timelineItem.addClass('focus');
+    scrollToTop();
+  }
+
+  function scrollToTop(){
+    var distTop = DOM.$timelineItem.offset().top;
+    // $('body').scrollTop(distTop);
+    $('body').animate({
+      scrollTop: distTop
+    }, 500);
+
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));

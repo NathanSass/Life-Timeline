@@ -9,13 +9,13 @@ var paths = {
   scripts: './app/scripts/**/*.js',
   styles: './app/styles/**/*.css',
   dist  : './dist'
-}
+};
 
 gulp.task('default', $.sequence('sass', 'inject', 'server', 'watch'));
 gulp.task('server', startServer);
 gulp.task('watch', startWatch);
-gulp.task('inject', startInject)
-gulp.task('sass', startSass)
+gulp.task('inject', startInject);
+gulp.task('sass', startSass);
 
 function startServer(){
   require('./server');
@@ -26,9 +26,9 @@ function startSass(){
   return gulp.src('./sass/app.scss')
     .pipe($.plumber())
     .pipe($.sass())
-    .pipe($.concat('app.css'))    
+    .pipe($.concat('app.css'))
     .pipe($.plumber.stop())
-    .pipe(gulp.dest(paths.root + '/styles'))
+    .pipe(gulp.dest(paths.root + '/styles'));
 }
 
 function startWatch(){
