@@ -7,24 +7,28 @@
     },
     { age: '2.4543',
       img: [imagePath+'bathtub.jpg'],
-      desc: 'Bathing at my cabin in northern canada'
-    },
-    { age: '5.3452'
-    },
-    { age: '9.4566'
-    },
-    { age: '12.7645'
-    },
-    { age: '13.3453'
-    },
-    { age: '14.6456'
+      desc: 'Bathing at my cabin in northern Canada.'
     },
     { age: '15.2344',
       desc: 'I took my first whitewater kayaking lesson. I have been in love ever since'
     },
+    {
+      age: '18.7432',
+      img: [imagePath+'ice_breaker_slalom.jpg'],
+      desc: 'Qualifying for the Olympic Trials in North Carolina. I did not end up racing at the Olympic Trials because of a car accident.'
+    },
     { age: '21.1455',
       img: [imagePath+'sketch_fly.jpg'],
       desc: 'First watercolor.'
+    },
+    { age: '22.0000',
+      img: [imagePath+'falls_race.jpg'],
+      desc: 'Second place at Falls Race on the Potomac River'
+
+    },
+    { age: '22.0542',
+      img: [imagePath+ 'otis_sup.jpg'],
+      desc: 'Went stand up paddleboarding with my puppy and took this cute photo.'
     },
     { age: '23.4455',
       img: [imagePath+'pond1.jpg', imagePath+'pond2.jpg'],
@@ -41,7 +45,16 @@
       img: [imagePath+'truchas.jpg'],
       desc: 'Alseseca River, Mexico. - After days of rain, the sun broke through the jungle canopy lighting up this beautiful waterfall. Making for a memorable descent.'
     },
-    { age: '25.7892'
+    { age: '24.6657',
+      img: [imagePath+'beach_log.jpg'],
+      desc: 'Moved to California'
+    },
+    { age: '25.0002',
+      desc: 'Began my first job as software developer at JPMorgan Chase'
+    },
+    { age: '25.5233',
+      img:[imagePath+'kirkwood.jpg'],
+      desc: 'Rode an incredible line down from the top of Kirkwood mountain during a storm.'
     }
   ];
   
@@ -69,10 +82,15 @@
     $('body').animate({
       scrollTop: distTop
     }, 500);
+  }
 
+  function openAllPosts(){
+    // need to also check if one was open
+    $('.timeline-item').toggleClass('focus');
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
+  $('.js-blog-mode').on('click', openAllPosts.bind(this));
 
 
   window.Homesite = window.Homesite || {
