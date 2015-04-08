@@ -28,6 +28,7 @@ function startSass(){
     .pipe($.sass())
     .pipe($.concat('app.css'))
     .pipe($.plumber.stop())
+    .pipe($.autoprefixer())
     .pipe(gulp.dest(paths.root + '/styles'));
 }
 

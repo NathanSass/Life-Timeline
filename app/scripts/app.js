@@ -2,7 +2,7 @@
   'use strict';
   var imagePath = 'app/images/';
   var templateData = [
-    { age: '0.0001',
+    { age: '0.0011',
       desc: 'I was born. The world has not been the same since.'
     },
     { age: '2.4543',

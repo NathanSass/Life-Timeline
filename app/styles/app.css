@@ -32,7 +32,9 @@ body {
     display: inline-block;
     position: absolute;
     right: 60px;
-    transform: skew(4deg, 0deg); }
+    -webkit-transform: skew(4deg, 0deg);
+        -ms-transform: skew(4deg, 0deg);
+            transform: skew(4deg, 0deg); }
   .first-breaker .solid-piece {
     background: #353535;
     display: inline-block;
@@ -40,7 +42,9 @@ body {
     overflow: visible;
     position: absolute;
     right: -25px;
-    transform: skew(-18deg, 0deg);
+    -webkit-transform: skew(-18deg, 0deg);
+        -ms-transform: skew(-18deg, 0deg);
+            transform: skew(-18deg, 0deg);
     width: 150px; }
 
 .my-name {
@@ -50,8 +54,12 @@ body {
   margin: 0;
   padding: 0;
   position: absolute;
-  transform: rotate(90deg);
-  transform-origin: left top;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
   top: 30vh;
   white-space: nowrap;
   z-index: -1; }
@@ -77,7 +85,8 @@ body {
 .timeline .timeline-item.focus .timeline-content {
   display: block;
   opacity: 1;
-  transition: opacity 3s; }
+  -webkit-transition: opacity 3s;
+          transition: opacity 3s; }
 .timeline .timeline-item.focus .age {
   color: #9E9E9E; }
 
@@ -87,7 +96,8 @@ body {
   position: relative;
   right: -30vw;
   width: 70vw;
-  transition: opacity 3s; }
+  -webkit-transition: opacity 3s;
+          transition: opacity 3s; }
   .timeline-content img {
     width: 70vw; }
   .timeline-content .desc {
@@ -102,14 +112,18 @@ nav {
   left: -20px;
   overflow: visible;
   position: fixed;
-  transform: skew(-17deg, 4deg);
+  -webkit-transform: skew(-17deg, 4deg);
+      -ms-transform: skew(-17deg, 4deg);
+          transform: skew(-17deg, 4deg);
   width: 280px; }
   nav .nav-list {
     color: #e0e0e0;
     list-style: none;
     font-size: 2.3em;
     margin-top: 15px;
-    transform: skew(17deg, -4deg); }
+    -webkit-transform: skew(17deg, -4deg);
+        -ms-transform: skew(17deg, -4deg);
+            transform: skew(17deg, -4deg); }
     nav .nav-list li {
       display: inline-block;
       margin-right: .6em; }
