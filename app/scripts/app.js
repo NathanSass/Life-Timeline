@@ -65,7 +65,8 @@
   });
 
   var DOM = {
-    $timelineItem: null
+    $timelineItem: null,
+    blogMode: false,
   };
   
   function focusTimelineItem(e) {
@@ -73,20 +74,26 @@
     $('.timeline-item').removeClass('focus');
     DOM.$timelineItem = $(e.target).closest('li');
     DOM.$timelineItem.addClass('focus');
-    scrollToTop();
+    scrollToTop(DOM.$timelineItem);
+    DOM.blogMode = false;
   }
 
-  function scrollToTop(){
-    var distTop = DOM.$timelineItem.offset().top;
-    // $('body').scrollTop(distTop);
+  function scrollToTop(el){
+    var distTop = el.offset().top;
     $('body').animate({
       scrollTop: distTop
     }, 500);
   }
 
-  function openAllPosts(){
-    // need to also check if one was open
-    $('.timeline-item').toggleClass('focus');
+  function openAllPosts(e){
+    $('.timeline-item').removeClass('focus');
+    scrollToTop($('.timeline-blurb'));
+    if (DOM.blogMode) {
+      DOM.blogMode = false;
+    }else {
+      $('.timeline-item').addClass('focus');
+      DOM.blogMode = true;
+    }
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));

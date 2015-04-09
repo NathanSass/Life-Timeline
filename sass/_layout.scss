@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+$black: #111111;
+$lime: #01FF70;
+$gray: #AAAAAA;
+$dk-gray: #353535;
+$silver: #DDDDDD;
+$teal: #39CCCC;
+$olive: #3D9970;
+$purple: #B10DC9;
+$blue: #0074D9;
+
 html,
 body {
   height: 100%;
@@ -19,7 +29,7 @@ body {
 .bio {
   padding: 6vw;
   .bio-text {
-    color: rgb(29, 29, 29);
+    color: $black;
     line-height: 1.2em;
     margin-top: 0;
     font-size: 1.3em;
@@ -44,7 +54,7 @@ body {
     transform: skew(4deg, 0deg);
   }
   .solid-piece {
-    background: #353535;
+    background: $dk-gray;
     display: inline-block;
     height: 22vh;
     overflow: visible;
@@ -56,7 +66,7 @@ body {
 }
 
 .my-name {
-  color: rgb(197, 197, 197);
+  color: $silver;
   font-size: 12vh;
   left: 11vh;
   margin: 0;
@@ -86,10 +96,11 @@ body {
   }
   .timeline-item {
     .age {
-      color: rgb(219, 219, 219);
+      color: $silver;
       font-size: 2.5em;
       font-weight: 600;
       text-decoration: none;
+      transition: color .25s;
       &:hover {
         color: #9E9E9E;
       }
@@ -103,7 +114,7 @@ body {
 
       }
       .age {
-        color: #9E9E9E;
+        color: $gray;
       }
     }
   }
@@ -119,19 +130,26 @@ body {
   width: 70vw;
   transition: opacity 3s;
   img {
+    box-shadow: -1px 5px 23px -5px rgba(119, 119, 119, 0.97);
+    filter: grayscale(.6);    
+    opacity: .6;
+    transition: opacity .5s ease, filter .5s ease;
     width: 70vw;
   }
   .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD;
   }
-  .special {
-    
+  &:hover {
+    img {
+      filter: grayscale(0);
+      opacity: 1;
+    }
   }
 }
 
 nav {
-  background: #353535;
+  background: rgba(53, 53, 53, 0.85);
   bottom: 8vh;
   content: '';
   height: 81px;
@@ -140,6 +158,7 @@ nav {
   position: fixed;
   transform: skew(-17deg, 4deg);
   width: 280px;
+  transition: background .25s;
   .nav-list {
     color: rgb(224, 224, 224);
     list-style: none;
@@ -152,21 +171,32 @@ nav {
     }
     a {
       color: #737373;
+      transition: color .25s;
     }
-    a:first-child {
+    .top-nav {
       padding-top: .5em;
     }
-    a:hover {
-      color: #FFFFFF;
+    .nav-top:hover{
+      color: $purple;
+    }
+    .nav-footer:hover{
+      color: $olive;
+    }
+    .nav-blog:hover {
+      color: $teal;
     }
   }
+}
+
+nav:hover {
+  background: rgba(53, 53, 53, 1);
 }
 
 footer {
   overflow-x: hidden;
   position: relative;
   .top-slant-piece {
-    background: #1D1D1D;
+    background: $dk-gray;
     height: 12vh;
     left: -2vh;
     overflow-x: hidden;
@@ -176,23 +206,20 @@ footer {
     -webkit-transform: rotate(-5deg);
   }
   .main-footer {
-    background: #1D1D1D;
-    // height: 16vh;
-    // margin-bottom: -3vh;
-    // top: -3vh;
+    background: $dk-gray;
     position: relative;
   }
   .footer-content {
     width: 100vw;
     .contact {
       .contact-header {
-        color: rgb(73, 73, 73);
+        color: $silver;
         font-size: 1.65em;
         padding-bottom: .5em;
         text-align: center;
       }
       .icon-list {
-        border-bottom: 1px solid rgb(37, 37, 37);
+        border-bottom: 1px solid $gray;
         list-style: none;
         margin: 0 auto;
         padding: 0 0 .5em 0;
@@ -202,10 +229,12 @@ footer {
           display: inline-block;
           font-size: 2.5em;
           a {
+            color: $gray;
             padding: .25em;
             padding-bottom: 0;
+            transition: color .25s;
             &:hover {
-              color:  #01FF70;;
+              color:  $lime;
             }
           }
         }
@@ -214,6 +243,7 @@ footer {
     .final-footer {
       position: relative;
       bottom: 5px;
+      color: $gray;
       p {
         margin-bottom: 0;
         text-align: center;

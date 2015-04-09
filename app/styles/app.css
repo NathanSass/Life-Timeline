@@ -13,7 +13,7 @@ body {
 .bio {
   padding: 6vw; }
   .bio .bio-text {
-    color: #1d1d1d;
+    color: #111111;
     line-height: 1.2em;
     margin-top: 0;
     font-size: 1.3em;
@@ -48,7 +48,7 @@ body {
     width: 150px; }
 
 .my-name {
-  color: #c5c5c5;
+  color: #DDDDDD;
   font-size: 12vh;
   left: 11vh;
   margin: 0;
@@ -76,10 +76,12 @@ body {
   text-align: center;
   padding-left: 0; }
 .timeline .timeline-item .age {
-  color: #dbdbdb;
+  color: #DDDDDD;
   font-size: 2.5em;
   font-weight: 600;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color .25s;
+          transition: color .25s; }
   .timeline .timeline-item .age:hover {
     color: #9E9E9E; }
 .timeline .timeline-item.focus .timeline-content {
@@ -88,7 +90,7 @@ body {
   -webkit-transition: opacity 3s;
           transition: opacity 3s; }
 .timeline .timeline-item.focus .age {
-  color: #9E9E9E; }
+  color: #AAAAAA; }
 
 .timeline-content {
   display: none;
@@ -99,13 +101,23 @@ body {
   -webkit-transition: opacity 3s;
           transition: opacity 3s; }
   .timeline-content img {
+    box-shadow: -1px 5px 23px -5px rgba(119, 119, 119, 0.97);
+    -webkit-filter: grayscale(0.6);
+            filter: grayscale(0.6);
+    opacity: .6;
+    -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, opacity .5s ease, filter .5s ease;
+            transition: opacity .5s ease, filter .5s ease;
     width: 70vw; }
   .timeline-content .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD; }
+  .timeline-content:hover img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    opacity: 1; }
 
 nav {
-  background: #353535;
+  background: rgba(53, 53, 53, 0.85);
   bottom: 8vh;
   content: '';
   height: 81px;
@@ -115,7 +127,9 @@ nav {
   -webkit-transform: skew(-17deg, 4deg);
       -ms-transform: skew(-17deg, 4deg);
           transform: skew(-17deg, 4deg);
-  width: 280px; }
+  width: 280px;
+  -webkit-transition: background .25s;
+          transition: background .25s; }
   nav .nav-list {
     color: #e0e0e0;
     list-style: none;
@@ -128,17 +142,26 @@ nav {
       display: inline-block;
       margin-right: .6em; }
     nav .nav-list a {
-      color: #737373; }
-    nav .nav-list a:first-child {
+      color: #737373;
+      -webkit-transition: color .25s;
+              transition: color .25s; }
+    nav .nav-list .top-nav {
       padding-top: .5em; }
-    nav .nav-list a:hover {
-      color: #FFFFFF; }
+    nav .nav-list .nav-top:hover {
+      color: #B10DC9; }
+    nav .nav-list .nav-footer:hover {
+      color: #3D9970; }
+    nav .nav-list .nav-blog:hover {
+      color: #39CCCC; }
+
+nav:hover {
+  background: #353535; }
 
 footer {
   overflow-x: hidden;
   position: relative; }
   footer .top-slant-piece {
-    background: #1D1D1D;
+    background: #353535;
     height: 12vh;
     left: -2vh;
     overflow-x: hidden;
@@ -147,17 +170,17 @@ footer {
     width: 125vw;
     -webkit-transform: rotate(-5deg); }
   footer .main-footer {
-    background: #1D1D1D;
+    background: #353535;
     position: relative; }
   footer .footer-content {
     width: 100vw; }
     footer .footer-content .contact .contact-header {
-      color: #494949;
+      color: #DDDDDD;
       font-size: 1.65em;
       padding-bottom: .5em;
       text-align: center; }
     footer .footer-content .contact .icon-list {
-      border-bottom: 1px solid #252525;
+      border-bottom: 1px solid #AAAAAA;
       list-style: none;
       margin: 0 auto;
       padding: 0 0 .5em 0;
@@ -167,13 +190,17 @@ footer {
         display: inline-block;
         font-size: 2.5em; }
         footer .footer-content .contact .icon-list li a {
+          color: #AAAAAA;
           padding: .25em;
-          padding-bottom: 0; }
+          padding-bottom: 0;
+          -webkit-transition: color .25s;
+                  transition: color .25s; }
           footer .footer-content .contact .icon-list li a:hover {
             color: #01FF70; }
     footer .footer-content .final-footer {
       position: relative;
-      bottom: 5px; }
+      bottom: 5px;
+      color: #AAAAAA; }
       footer .footer-content .final-footer p {
         margin-bottom: 0;
         text-align: center; }
