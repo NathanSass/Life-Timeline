@@ -15,7 +15,6 @@ $purple: #B10DC9;
 $blue: #0074D9;
 
 $medium: 760px;
-$large: 1100px;
 
 html,
 body {
@@ -120,6 +119,19 @@ body {
         color: $gray;
       }
     }
+    &.image-focus {
+      .timeline-content {
+        right: 0vw;
+        width: 100vw;
+      }
+      .timeline-image {
+        width: 100vw;
+      }
+      .desc {
+        margin-left: 30vw;
+      }
+    }
+
   }
 }
 
@@ -131,12 +143,12 @@ body {
   right: -30vw;
   width: 70vw;
   transition: opacity 3s;
-  img {
+  .timeline-image {
     box-shadow: -1px 5px 23px -5px rgba(119, 119, 119, 0.97);
     filter: grayscale(.6);    
     opacity: .6;
     position: relative;
-    transition: opacity .5s ease, filter .5s ease;
+    transition: opacity .5s ease, filter .5s ease, width .5s ease;
     width: 70vw;
   }
   .desc {
@@ -144,7 +156,7 @@ body {
     border-bottom: 1px solid #BDBDBD;
   }
   &:hover {
-    img {
+    .timeline-image {
       filter: grayscale(0);
       opacity: 1;
     }
@@ -200,11 +212,11 @@ footer {
   position: relative;
   .top-slant-piece {
     background: $dk-gray;
-    height: 12vh;
+    height: 7em;
     left: -2vh;
     overflow-x: hidden;
     position: relative;
-    top: 5em;
+    top: 4em;
     width: 125vw;
     -webkit-transform: rotate(-5deg);
   }
@@ -218,7 +230,7 @@ footer {
       .contact-header {
         color: $silver;
         font-size: 1.65em;
-        padding: 2em 0 .5em 0;
+        padding: 0 0 .5em 0;
         text-align: center;
       }
       .icon-list {
@@ -255,19 +267,30 @@ footer {
   }
 }
 
-// @media (min-width: $medium) {
-//   .timeline-content {
-//     img {
-//       width: 50vw;
-//       right: 10vw;
-//     }
-//   }
-// }
 @media (min-width: $medium) {
+  .timeline .timeline-item.image-focus {
+    .timeline-content {
+      right: -30vw;
+      width: 70vw;
+    }
+    .timeline-image {
+      width: 50vw;
+      right: 10vw;
+    }
+    .desc {
+      margin-left: 0;
+    }
+  }
   .timeline-content {
-    img {
+    .timeline-image {
       width: 30vw;
       right: 20vw;
     }
+  }
+  footer .top-slant-piece {
+    transform: rotate(-4deg);
+  }
+  footer .footer-content .contact .contact-header {
+    padding: .5em 0 .5em 0;
   }
 }

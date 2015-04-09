@@ -75,7 +75,7 @@
   
   function focusTimelineItem(e) {
     e.preventDefault();
-    $('.timeline-item').removeClass('focus');
+    // $('.timeline-item').removeClass('focus');
     DOM.$timelineItem = $(e.target).closest('li');
     DOM.$timelineItem.addClass('focus');
     scrollToTop(DOM.$timelineItem);
@@ -90,7 +90,9 @@
   }
 
   function openAllPosts(e){
-    $('.timeline-item').removeClass('focus');
+    var $timelineItems = $('.timeline-item');
+    $timelineItems.removeClass('focus');
+    $timelineItems.removeClass('image-focus');
     scrollToTop($('.timeline-blurb'));
     if (DOM.blogMode) {
       DOM.blogMode = false;
@@ -100,8 +102,14 @@
     }
   }
 
+  function focusImage(e) {
+    DOM.$timelineItem = $(e.target).closest('li');
+    DOM.$timelineItem.toggleClass('image-focus');
+  }
+
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
   $('.js-blog-mode').on('click', openAllPosts.bind(this));
+  $('.timeline-image').on('click', focusImage.bind(this));
 
 
   window.Homesite = window.Homesite || {

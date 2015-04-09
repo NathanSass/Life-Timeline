@@ -91,6 +91,13 @@ body {
           transition: opacity 3s; }
 .timeline .timeline-item.focus .age {
   color: #AAAAAA; }
+.timeline .timeline-item.image-focus .timeline-content {
+  right: 0vw;
+  width: 100vw; }
+.timeline .timeline-item.image-focus .timeline-image {
+  width: 100vw; }
+.timeline .timeline-item.image-focus .desc {
+  margin-left: 30vw; }
 
 .timeline-content {
   display: none;
@@ -100,19 +107,19 @@ body {
   width: 70vw;
   -webkit-transition: opacity 3s;
           transition: opacity 3s; }
-  .timeline-content img {
+  .timeline-content .timeline-image {
     box-shadow: -1px 5px 23px -5px rgba(119, 119, 119, 0.97);
     -webkit-filter: grayscale(0.6);
             filter: grayscale(0.6);
     opacity: .6;
     position: relative;
-    -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, opacity .5s ease, filter .5s ease;
-            transition: opacity .5s ease, filter .5s ease;
+    -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, width .5s ease, opacity .5s ease, filter .5s ease, width .5s ease;
+            transition: opacity .5s ease, filter .5s ease, width .5s ease;
     width: 70vw; }
   .timeline-content .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD; }
-  .timeline-content:hover img {
+  .timeline-content:hover .timeline-image {
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
     opacity: 1; }
@@ -163,11 +170,11 @@ footer {
   position: relative; }
   footer .top-slant-piece {
     background: #353535;
-    height: 12vh;
+    height: 7em;
     left: -2vh;
     overflow-x: hidden;
     position: relative;
-    top: 5em;
+    top: 4em;
     width: 125vw;
     -webkit-transform: rotate(-5deg); }
   footer .main-footer {
@@ -178,7 +185,7 @@ footer {
     footer .footer-content .contact .contact-header {
       color: #DDDDDD;
       font-size: 1.65em;
-      padding: 2em 0 .5em 0;
+      padding: 0 0 .5em 0;
       text-align: center; }
     footer .footer-content .contact .icon-list {
       border-bottom: 1px solid #AAAAAA;
@@ -207,6 +214,20 @@ footer {
         text-align: center; }
 
 @media (min-width: 760px) {
-  .timeline-content img {
+  .timeline .timeline-item.image-focus .timeline-content {
+    right: -30vw;
+    width: 70vw; }
+  .timeline .timeline-item.image-focus .timeline-image {
+    width: 50vw;
+    right: 10vw; }
+  .timeline .timeline-item.image-focus .desc {
+    margin-left: 0; }
+  .timeline-content .timeline-image {
     width: 30vw;
-    right: 20vw; } }
+    right: 20vw; }
+  footer .top-slant-piece {
+    -webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+            transform: rotate(-4deg); }
+  footer .footer-content .contact .contact-header {
+    padding: .5em 0 .5em 0; } }
