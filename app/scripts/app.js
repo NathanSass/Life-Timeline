@@ -12,6 +12,10 @@
     { age: '15.2344',
       desc: 'I took my first whitewater kayaking lesson. I have been in love ever since'
     },
+    { age: '16.4345',
+      img: [imagePath + 'nathan_ruby.jpg'],
+      desc: 'Spent most weekends in the mountains fishing with my dog Ruby.'
+    },
     {
       age: '18.7432',
       img: [imagePath+'ice_breaker_slalom.jpg'],

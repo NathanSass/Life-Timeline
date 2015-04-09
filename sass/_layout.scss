@@ -14,6 +14,9 @@ $olive: #3D9970;
 $purple: #B10DC9;
 $blue: #0074D9;
 
+$medium: 760px;
+$large: 1100px;
+
 html,
 body {
   height: 100%;
@@ -42,12 +45,13 @@ body {
 }
 
 .first-breaker {
+    $breaker-height: 7em;
     position: relative;
     overflow-x: hidden;
     width: 100vw;
-    height: 22vh;
+    height: $breaker-height;
   .image-piece {
-    height: 22vh;
+    height: $breaker-height;
     display: inline-block;
     position: absolute;
     right: 60px;
@@ -56,12 +60,12 @@ body {
   .solid-piece {
     background: $dk-gray;
     display: inline-block;
-    height: 22vh;
+    height: $breaker-height;
     overflow: visible;
     position: absolute;
     right: -25px;
     transform: skew(-18deg, 0deg);
-    width: 150px;
+    width: 9em;
   }
 }
 
@@ -108,7 +112,6 @@ body {
     &.focus {
       .timeline-content {
         display: block;
-        // visibility: visible;
         opacity: 1;
         transition: opacity 3s;
 
@@ -123,7 +126,6 @@ body {
 
 .timeline-content {
   display: none;
-  // visibility: hidden;
   opacity: 0;
   position: relative;
   right: -30vw;
@@ -133,6 +135,7 @@ body {
     box-shadow: -1px 5px 23px -5px rgba(119, 119, 119, 0.97);
     filter: grayscale(.6);    
     opacity: .6;
+    position: relative;
     transition: opacity .5s ease, filter .5s ease;
     width: 70vw;
   }
@@ -201,7 +204,7 @@ footer {
     left: -2vh;
     overflow-x: hidden;
     position: relative;
-    top: 35px;
+    top: 5em;
     width: 125vw;
     -webkit-transform: rotate(-5deg);
   }
@@ -215,7 +218,7 @@ footer {
       .contact-header {
         color: $silver;
         font-size: 1.65em;
-        padding-bottom: .5em;
+        padding: 2em 0 .5em 0;
         text-align: center;
       }
       .icon-list {
@@ -248,6 +251,23 @@ footer {
         margin-bottom: 0;
         text-align: center;
       }
+    }
+  }
+}
+
+// @media (min-width: $medium) {
+//   .timeline-content {
+//     img {
+//       width: 50vw;
+//       right: 10vw;
+//     }
+//   }
+// }
+@media (min-width: $medium) {
+  .timeline-content {
+    img {
+      width: 30vw;
+      right: 20vw;
     }
   }
 }

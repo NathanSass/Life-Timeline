@@ -26,9 +26,9 @@ body {
   position: relative;
   overflow-x: hidden;
   width: 100vw;
-  height: 22vh; }
+  height: 7em; }
   .first-breaker .image-piece {
-    height: 22vh;
+    height: 7em;
     display: inline-block;
     position: absolute;
     right: 60px;
@@ -38,14 +38,14 @@ body {
   .first-breaker .solid-piece {
     background: #353535;
     display: inline-block;
-    height: 22vh;
+    height: 7em;
     overflow: visible;
     position: absolute;
     right: -25px;
     -webkit-transform: skew(-18deg, 0deg);
         -ms-transform: skew(-18deg, 0deg);
             transform: skew(-18deg, 0deg);
-    width: 150px; }
+    width: 9em; }
 
 .my-name {
   color: #DDDDDD;
@@ -105,6 +105,7 @@ body {
     -webkit-filter: grayscale(0.6);
             filter: grayscale(0.6);
     opacity: .6;
+    position: relative;
     -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, opacity .5s ease, filter .5s ease;
             transition: opacity .5s ease, filter .5s ease;
     width: 70vw; }
@@ -166,7 +167,7 @@ footer {
     left: -2vh;
     overflow-x: hidden;
     position: relative;
-    top: 35px;
+    top: 5em;
     width: 125vw;
     -webkit-transform: rotate(-5deg); }
   footer .main-footer {
@@ -177,7 +178,7 @@ footer {
     footer .footer-content .contact .contact-header {
       color: #DDDDDD;
       font-size: 1.65em;
-      padding-bottom: .5em;
+      padding: 2em 0 .5em 0;
       text-align: center; }
     footer .footer-content .contact .icon-list {
       border-bottom: 1px solid #AAAAAA;
@@ -204,3 +205,8 @@ footer {
       footer .footer-content .final-footer p {
         margin-bottom: 0;
         text-align: center; }
+
+@media (min-width: 760px) {
+  .timeline-content img {
+    width: 30vw;
+    right: 20vw; } }
