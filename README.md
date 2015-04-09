@@ -1,2 +1,2 @@
-# new home site
-check out the wip [here!](http://nathansass.github.io/personalSite2/)
+# Personal Site
+Check me out [here!](http://nathansass.github.io/personalSite2/)
