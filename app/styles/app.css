@@ -135,14 +135,14 @@ nav {
   -webkit-transform: skew(-17deg, 4deg);
       -ms-transform: skew(-17deg, 4deg);
           transform: skew(-17deg, 4deg);
-  width: 280px;
+  width: 110px;
   -webkit-transition: background .25s;
           transition: background .25s; }
   nav .nav-list {
     color: #e0e0e0;
     list-style: none;
     font-size: 2.3em;
-    margin-top: 15px;
+    margin-top: 20px;
     -webkit-transform: skew(17deg, -4deg);
         -ms-transform: skew(17deg, -4deg);
             transform: skew(17deg, -4deg); }
@@ -152,13 +152,10 @@ nav {
     nav .nav-list a {
       color: #737373;
       -webkit-transition: color .25s;
-              transition: color .25s; }
+              transition: color .25s;
+      padding: .25em; }
     nav .nav-list .top-nav {
       padding-top: .5em; }
-    nav .nav-list .nav-top:hover {
-      color: #B10DC9; }
-    nav .nav-list .nav-footer:hover {
-      color: #3D9970; }
     nav .nav-list .nav-blog:hover {
       color: #39CCCC; }
 

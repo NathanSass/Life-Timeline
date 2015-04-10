@@ -75,9 +75,8 @@
   
   function focusTimelineItem(e) {
     e.preventDefault();
-    // $('.timeline-item').removeClass('focus');
     DOM.$timelineItem = $(e.target).closest('li');
-    DOM.$timelineItem.addClass('focus');
+    DOM.$timelineItem.toggleClass('focus');
     scrollToTop(DOM.$timelineItem);
     DOM.blogMode = false;
   }
