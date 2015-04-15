@@ -130,6 +130,9 @@ body {
       .desc {
         margin-left: 30vw;
       }
+      .timeline-image-container:after {
+        opacity: 0;
+      }
     }
 
   }
@@ -150,6 +153,23 @@ body {
     position: relative;
     transition: opacity .5s ease, filter .5s ease, width .5s ease;
     width: 70vw;
+  }
+  .timeline-image-container:hover:after {
+    color: rgba(1, 255, 112, 0.48);
+    content: 'Click to Enlarge';
+    font-size: 1.5em;
+    font-weight: 200;
+    height: 1.5em;
+    left: 0;
+    line-height: 1.5em;
+    opacity: 1;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    transform: rotate(90deg);
+    transform-origin: left top;
+    transition: opacity .1s .3s;
   }
   .desc {
     text-align: left;
@@ -185,15 +205,16 @@ nav {
       margin-right: .6em;
     }
     a {
-      color: #737373;
-      transition: color .25s;
+      color: $teal;
+      transition: opacity .25s;
+      opacity: .6;
       padding: .25em;
     }
     .top-nav {
       padding-top: .5em;
     }
-    .nav-blog:hover {
-      color: $teal;
+    a:hover {
+      opacity: 1;
     }
   }
 }
@@ -289,6 +310,9 @@ footer {
     .timeline-image {
       width: 30vw;
       right: 20vw;
+    }
+    .timeline-image-container:hover:after {
+      width: 30vw;
     }
   }
   footer .top-slant-piece {

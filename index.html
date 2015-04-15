@@ -79,7 +79,9 @@
         <div class="timeline-content">
           {{#if img}}
             {{#each img}}
-              <img class="timeline-image" src={{.}}>
+              <div class="timeline-image-container">
+                <img class="timeline-image" src={{.}}>
+              </div>
             {{/each}}
           {{/if}}
           {{#if desc}}

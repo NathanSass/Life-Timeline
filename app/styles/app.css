@@ -98,6 +98,8 @@ body {
   width: 100vw; }
 .timeline .timeline-item.image-focus .desc {
   margin-left: 30vw; }
+.timeline .timeline-item.image-focus .timeline-image-container:after {
+  opacity: 0; }
 
 .timeline-content {
   display: none;
@@ -116,6 +118,27 @@ body {
     -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, width .5s ease, opacity .5s ease, filter .5s ease, width .5s ease;
             transition: opacity .5s ease, filter .5s ease, width .5s ease;
     width: 70vw; }
+  .timeline-content .timeline-image-container:hover:after {
+    color: rgba(1, 255, 112, 0.48);
+    content: 'Click to Enlarge';
+    font-size: 1.5em;
+    font-weight: 200;
+    height: 1.5em;
+    left: 0;
+    line-height: 1.5em;
+    opacity: 1;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transition: opacity .1s .3s;
+            transition: opacity .1s .3s; }
   .timeline-content .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD; }
@@ -150,14 +173,15 @@ nav {
       display: inline-block;
       margin-right: .6em; }
     nav .nav-list a {
-      color: #737373;
-      -webkit-transition: color .25s;
-              transition: color .25s;
+      color: #39CCCC;
+      -webkit-transition: opacity .25s;
+              transition: opacity .25s;
+      opacity: .6;
       padding: .25em; }
     nav .nav-list .top-nav {
       padding-top: .5em; }
-    nav .nav-list .nav-blog:hover {
-      color: #39CCCC; }
+    nav .nav-list a:hover {
+      opacity: 1; }
 
 nav:hover {
   background: #353535; }
@@ -228,6 +252,8 @@ footer {
   .timeline-content .timeline-image {
     width: 30vw;
     right: 20vw; }
+  .timeline-content .timeline-image-container:hover:after {
+    width: 30vw; }
   footer .top-slant-piece {
     -webkit-transform: rotate(-4deg);
         -ms-transform: rotate(-4deg);
