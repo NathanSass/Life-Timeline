@@ -155,10 +155,10 @@ body {
     width: 70vw;
   }
   .timeline-image-container:hover:after {
-    color: rgba(1, 255, 112, 0.48);
+    color: $silver;
     content: 'Click to Enlarge';
     font-size: 1.5em;
-    font-weight: 200;
+    font-weight: 600;
     height: 1.5em;
     left: 0;
     line-height: 1.5em;
