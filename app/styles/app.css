@@ -118,9 +118,9 @@ body {
     -webkit-transition: opacity .5s ease, -webkit-filter .5s ease, width .5s ease, opacity .5s ease, filter .5s ease, width .5s ease;
             transition: opacity .5s ease, filter .5s ease, width .5s ease;
     width: 70vw; }
-  .timeline-content .timeline-image-container:hover:after {
+  .timeline-content .timeline-image-container:after {
     color: #DDDDDD;
-    content: 'Click to Enlarge';
+    content: 'Click to focus';
     font-size: 1.5em;
     font-weight: 600;
     height: 1.5em;

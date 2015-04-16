@@ -70,7 +70,7 @@
 
   var DOM = {
     $timelineItem: null,
-    blogMode: false,
+    blogMode: false
   };
   
   function focusTimelineItem(e) {
@@ -103,7 +103,12 @@
 
   function focusImage(e) {
     DOM.$timelineItem = $(e.target).closest('li');
-    DOM.$timelineItem.toggleClass('image-focus');
+    if (DOM.$timelineItem.hasClass('image-focus')) {
+      DOM.$timelineItem.removeClass('image-focus');
+    } else {
+      $('.timeline-item').removeClass('image-focus');
+      DOM.$timelineItem.addClass('image-focus');
+    }
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
