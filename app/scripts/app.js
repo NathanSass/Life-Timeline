@@ -17,6 +17,11 @@
       desc: 'Spent most weekends in the mountains fishing with my dog Ruby.'
     },
     {
+      age: '18.5839',
+      img: [imagePath+'mexico_with_mom.jpg'],
+      desc: 'Wrestling with my mom during a multiday kayaking trip in Mexico.'
+    },
+    {
       age: '18.7432',
       img: [imagePath+'ice_breaker_slalom.jpg'],
       desc: 'Qualifying for the Olympic Trials in North Carolina. I did not end up racing at the Olympic Trials because of a car accident.'
