@@ -1,2 +1,2 @@
 # Life Timeline
-Check me out [here!](http://nathansass.github.io/personalSite2/)
+Check me out [here!](http://nathansass.github.io/Life-Timeline/)
