@@ -64,6 +64,10 @@
     { age: '25.5233',
       img:[imagePath+'kirkwood.jpg'],
       desc: 'Rode an incredible line down from the top of Kirkwood mountain during a storm.'
+    },
+    { age: '26.2499',
+      img:[imagePath+'strawberry_sunrise.jpg'],
+      desc: 'Watched the sunrise over a reservoir in the Stanislaus National forest and made some pretty amazing life plans - stay tuned!'
     }
   ];
   
