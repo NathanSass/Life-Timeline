@@ -65,9 +65,17 @@
       img:[imagePath+'kirkwood.jpg'],
       desc: 'Rode an incredible line down from the top of Kirkwood mountain during a storm.'
     },
+    {
+      age: '26.1328',
+      desc: 'Woke up on a Saturday and wanted to find a fun activity in the best possible weather. So I built a location / weather aggregator to do it. Click <a href="http://nathansass.github.io/adventurePlanner/#/landing">here</a> to check it out'
+    },
     { age: '26.2499',
       img:[imagePath+'strawberry_sunrise.jpg'],
       desc: 'Watched the sunrise over a reservoir in the Stanislaus National forest and made some pretty amazing life plans - stay tuned!'
+    },
+    { age: '26.3193',
+      img:[imagePath+'robert_spout.jpg'],
+      desc: 'Experimented with triangles.'
     }
   ];
   
