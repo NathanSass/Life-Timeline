@@ -231,6 +231,9 @@ nav:hover {
   background: #353535; }
 
 footer {
+  opacity: 1;
+  -webkit-transition: opacity .7s .3s;
+          transition: opacity .7s .3s;
   overflow-x: hidden;
   position: relative; }
   footer .top-slant-piece {
@@ -315,22 +318,23 @@ body.dark {
     color: #DDDDDD;
     border-color: #353535; }
 
-.fly-in .bio {
+.entry-animation .bio {
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%); }
-.fly-in .my-name {
+.entry-animation .my-name {
   left: 0vh; }
-.fly-in .timeline {
+.entry-animation .timeline {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%); }
-.fly-in .timeline-blurb {
+.entry-animation .timeline-blurb {
   -webkit-transform: translateX(75%);
       -ms-transform: translateX(75%);
           transform: translateX(75%); }
-.fly-in .first-breaker {
-  -webkit-transform: translateX(50%);
-      -ms-transform: translateX(50%);
-          transform: translateX(50%);
+.entry-animation .first-breaker {
+  -webkit-transform: translateX(75%);
+      -ms-transform: translateX(75%);
+          transform: translateX(75%); }
+.entry-animation footer {
   opacity: 0; }

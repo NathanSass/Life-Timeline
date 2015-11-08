@@ -149,10 +149,19 @@
     changeSecondPhrase();
   }
 
+  function entryAnimation() {
+    setTimeout(function(){
+      $('body').removeClass('entry-animation');
+    }, 1000);
+
+  }
+
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
   $('.js-blog-mode').on('click', openAllPosts.bind(this));
   $('.timeline-image').on('click', focusImage.bind(this));
   $('.js-first-breaker-link').on('click', coolButtonClicked.bind(this));
+
+  entryAnimation();
 
 
   window.Homesite = window.Homesite || {

@@ -254,6 +254,8 @@ nav:hover {
 }
 
 footer {
+  opacity: 1;
+  transition: opacity .7s .3s;
   overflow-x: hidden;
   position: relative;
   .top-slant-piece {

@@ -1,4 +1,4 @@
-.fly-in {
+.entry-animation {
 	.bio {
 		transform: translateY(-100%);
 	}
@@ -13,7 +13,10 @@
 		transform: translateX(75%)
 	}
 	.first-breaker {
-		transform: translateX(50%);
+		transform: translateX(75%);
+	}
+
+	footer {
 		opacity: 0;
 	}
 }
