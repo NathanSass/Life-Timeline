@@ -318,23 +318,23 @@ body.dark {
     color: #DDDDDD;
     border-color: #353535; }
 
-.entry-animation .bio {
+.entry-animation.animate .bio {
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%); }
-.entry-animation .my-name {
+.entry-animation.animate .my-name {
   left: 0vh; }
-.entry-animation .timeline {
+.entry-animation.animate .timeline {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%); }
-.entry-animation .timeline-blurb {
+.entry-animation.animate .timeline-blurb {
   -webkit-transform: translateX(75%);
       -ms-transform: translateX(75%);
           transform: translateX(75%); }
-.entry-animation .first-breaker {
+.entry-animation.animate .first-breaker {
   -webkit-transform: translateX(75%);
       -ms-transform: translateX(75%);
           transform: translateX(75%); }
-.entry-animation footer {
+.entry-animation.animate footer {
   opacity: 0; }

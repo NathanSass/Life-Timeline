@@ -151,6 +151,7 @@
 
   function entryAnimation() {
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('body').addClass('animate');
       setTimeout(function(){
         $('body').removeClass('entry-animation');
       }, 1000);
