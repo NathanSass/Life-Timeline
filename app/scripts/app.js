@@ -159,6 +159,7 @@
   }
 
   function entryAnimation() {
+    history.pushState("", document.title, window.location.pathname); //removes after the hash, so load always starts off fresh
     Math.round(Math.random()) && $('body').addClass('dark');
     // if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $('body').addClass('disable-scroll-nav');
