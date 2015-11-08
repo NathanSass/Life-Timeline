@@ -128,9 +128,14 @@
     }
   }
 
+  function changeTheme(e) {
+    $('body').toggleClass('dark');
+  }
+
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
   $('.js-blog-mode').on('click', openAllPosts.bind(this));
   $('.timeline-image').on('click', focusImage.bind(this));
+  $('.js-first-breaker-link').on('click', changeTheme.bind(this));
 
 
   window.Homesite = window.Homesite || {

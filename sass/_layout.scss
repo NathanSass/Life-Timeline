@@ -27,6 +27,7 @@ body {
   color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
+  transition: background .3s;
 }
 
 .bio {
@@ -37,6 +38,7 @@ body {
     margin-top: 0;
     font-size: 1.3em;
     font-weight: 200;
+    transition: color .3s;
   }
   .first-phrase {
     font-weight: 400;
@@ -65,6 +67,13 @@ body {
     right: -25px;
     transform: skew(-18deg, 0deg);
     width: 9em;
+    transition: all .3s;
+  }
+  .first-breaker-link:hover {
+    .solid-piece {
+      background: #404040;
+      box-shadow: -5px 0 23px 1px rgba(119, 119, 119, 0.97);
+    }
   }
 }
 
@@ -174,6 +183,7 @@ body {
   .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD;
+    tra
   }
   &:hover {
     .timeline-image {
@@ -209,6 +219,7 @@ nav {
       transition: opacity .25s;
       opacity: .6;
       padding: .25em;
+      transition: color .3s;
     }
     .top-nav {
       padding-top: .5em;

@@ -8,7 +8,9 @@ body {
   background: #fafafa;
   color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0; }
+  margin: 0;
+  -webkit-transition: background .3s;
+          transition: background .3s; }
 
 .bio {
   padding: 6vw; }
@@ -17,7 +19,9 @@ body {
     line-height: 1.2em;
     margin-top: 0;
     font-size: 1.3em;
-    font-weight: 200; }
+    font-weight: 200;
+    -webkit-transition: color .3s;
+            transition: color .3s; }
   .bio .first-phrase {
     font-weight: 400;
     font-size: 1.35em; }
@@ -45,7 +49,12 @@ body {
     -webkit-transform: skew(-18deg, 0deg);
         -ms-transform: skew(-18deg, 0deg);
             transform: skew(-18deg, 0deg);
-    width: 9em; }
+    width: 9em;
+    -webkit-transition: all .3s;
+            transition: all .3s; }
+  .first-breaker .first-breaker-link:hover .solid-piece {
+    background: #404040;
+    box-shadow: -5px 0 23px 1px rgba(119, 119, 119, 0.97); }
 
 .my-name {
   color: #DDDDDD;
@@ -260,3 +269,13 @@ footer {
             transform: rotate(-4deg); }
   footer .footer-content .contact .contact-header {
     padding: .5em 0 .5em 0; } }
+
+body.dark {
+  background: #111111; }
+  body.dark .bio-text {
+    color: #DDDDDD; }
+  body.dark nav .nav-list a {
+    color: #B10DC9; }
+  body.dark .timeline-content .desc {
+    color: #DDDDDD;
+    border-color: #353535; }

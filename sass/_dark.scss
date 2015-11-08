@@ -1,0 +1,16 @@
+body.dark {
+	background: $black;
+
+	.bio-text {
+		color: $silver;
+	}
+
+	nav .nav-list a {
+		color: $purple;
+	}
+	.timeline-content .desc {
+		color: $silver;
+		border-color: $dk-gray;
+	}
+
+}
