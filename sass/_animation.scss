@@ -1,0 +1,19 @@
+.fly-in {
+	.bio {
+		transform: translateY(-100%);
+	}
+	.my-name {
+		left: 0vh;
+	}
+	.timeline {
+		transform: translateX(100%);
+
+	}
+	.timeline-blurb {
+		transform: translateX(75%)
+	}
+	.first-breaker {
+		transform: translateX(50%);
+		opacity: 0;
+	}
+}

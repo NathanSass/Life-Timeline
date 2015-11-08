@@ -13,7 +13,12 @@ body {
           transition: background .3s; }
 
 .bio {
-  padding: 6vw; }
+  padding: 6vw;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: -webkit-transform .5s;
+          transition: transform .5s; }
   .bio .bio-text {
     color: #111111;
     line-height: 1.2em;
@@ -32,8 +37,13 @@ body {
   width: 100vw;
   height: 7em;
   left: 0;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
   -webkit-transition: left .3s;
-          transition: left .3s; }
+          transition: left .3s;
+  -webkit-transition: -webkit-transform .7s 1s;
+          transition: transform .7s 1s; }
   .first-breaker .image-piece {
     height: 7em;
     display: inline-block;
@@ -80,44 +90,58 @@ body {
           transform-origin: left top;
   top: 30vh;
   white-space: nowrap;
-  z-index: -1; }
+  z-index: -1;
+  -webkit-transition: left .7s .3s;
+          transition: left .7s .3s; }
 
 .timeline-blurb {
   color: #565555;
   font-size: 1.3em;
   font-weight: 200;
-  padding-left: 30vw; }
+  padding-left: 30vw;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform .5s 1s;
+          transition: transform .5s 1s; }
   .timeline-blurb p {
     border-bottom: 1px solid #BDBDBD; }
 
-.timeline .timeline-list {
-  text-align: center;
-  padding-left: 0; }
-.timeline .timeline-item .age {
-  color: #DDDDDD;
-  font-size: 2.5em;
-  font-weight: 600;
-  text-decoration: none;
-  -webkit-transition: color .25s;
-          transition: color .25s; }
-  .timeline .timeline-item .age:hover {
-    color: #9E9E9E; }
-.timeline .timeline-item.focus .timeline-content {
-  display: block;
-  opacity: 1;
-  -webkit-transition: opacity 3s;
-          transition: opacity 3s; }
-.timeline .timeline-item.focus .age {
-  color: #AAAAAA; }
-.timeline .timeline-item.image-focus .timeline-content {
-  right: 0vw;
-  width: 100vw; }
-.timeline .timeline-item.image-focus .timeline-image {
-  width: 100vw; }
-.timeline .timeline-item.image-focus .desc {
-  margin-left: 30vw; }
-.timeline .timeline-item.image-focus .timeline-image-container:after {
-  opacity: 0; }
+.timeline {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 1.2s;
+          transition: transform 1.2s; }
+  .timeline .timeline-list {
+    text-align: center;
+    padding-left: 0;
+    list-style: none; }
+  .timeline .timeline-item .age {
+    color: #DDDDDD;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: color .25s;
+            transition: color .25s; }
+    .timeline .timeline-item .age:hover {
+      color: #9E9E9E; }
+  .timeline .timeline-item.focus .timeline-content {
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 3s;
+            transition: opacity 3s; }
+  .timeline .timeline-item.focus .age {
+    color: #AAAAAA; }
+  .timeline .timeline-item.image-focus .timeline-content {
+    right: 0vw;
+    width: 100vw; }
+  .timeline .timeline-item.image-focus .timeline-image {
+    width: 100vw; }
+  .timeline .timeline-item.image-focus .desc {
+    margin-left: 30vw; }
+  .timeline .timeline-item.image-focus .timeline-image-container:after {
+    opacity: 0; }
 
 .timeline-content {
   display: none;
@@ -290,3 +314,23 @@ body.dark {
   body.dark .timeline-content .desc {
     color: #DDDDDD;
     border-color: #353535; }
+
+.fly-in .bio {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%); }
+.fly-in .my-name {
+  left: 0vh; }
+.fly-in .timeline {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%); }
+.fly-in .timeline-blurb {
+  -webkit-transform: translateX(75%);
+      -ms-transform: translateX(75%);
+          transform: translateX(75%); }
+.fly-in .first-breaker {
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  opacity: 0; }

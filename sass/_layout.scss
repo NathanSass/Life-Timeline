@@ -32,6 +32,7 @@ body {
 
 .bio {
   padding: 6vw;
+  transform: translateY(0%);
   .bio-text {
     color: $black;
     line-height: 1.2em;
@@ -44,6 +45,7 @@ body {
     font-weight: 400;
     font-size: 1.35em;
   }
+  transition: transform .5s;
 }
 
 .first-breaker {
@@ -52,7 +54,9 @@ body {
     width: 100vw;
     height: $breaker-height;
     left: 0;
+    transform: translateX(0%);
     transition: left .3s;
+    transition: transform .7s 1s;
 
   .image-piece {
     height: $breaker-height;
@@ -99,6 +103,7 @@ body {
   top: 30vh;
   white-space: nowrap;
   z-index: -1;
+  transition: left .7s .3s;
 }
 
 .timeline-blurb {
@@ -106,15 +111,20 @@ body {
   font-size: 1.3em;
   font-weight: 200;
   padding-left: 30vw;
+  transform: translateX(0%);
+  transition: transform .5s 1s;
   p {
     border-bottom: 1px solid #BDBDBD;
   }
 }
 
 .timeline {
+  transform: translateX(0%);
+  transition: transform 1.2s;
   .timeline-list {
     text-align: center;
-    padding-left: 0
+    padding-left: 0;
+    list-style: none;
   }
   .timeline-item {
     .age {
