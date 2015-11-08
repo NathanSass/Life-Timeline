@@ -30,7 +30,10 @@ body {
   position: relative;
   overflow-x: hidden;
   width: 100vw;
-  height: 7em; }
+  height: 7em;
+  left: 0;
+  -webkit-transition: left .3s;
+          transition: left .3s; }
   .first-breaker .image-piece {
     height: 7em;
     display: inline-block;
@@ -38,7 +41,9 @@ body {
     right: 60px;
     -webkit-transform: skew(4deg, 0deg);
         -ms-transform: skew(4deg, 0deg);
-            transform: skew(4deg, 0deg); }
+            transform: skew(4deg, 0deg);
+    -webkit-transition: right .5s;
+            transition: right .5s; }
   .first-breaker .solid-piece {
     background: #353535;
     display: inline-block;
@@ -55,6 +60,10 @@ body {
   .first-breaker .first-breaker-link:hover .solid-piece {
     background: #404040;
     box-shadow: -5px 0 23px 1px rgba(119, 119, 119, 0.97); }
+  .first-breaker:active {
+    left: 11vw; }
+    .first-breaker:active .image-piece {
+      right: 0px; }
 
 .my-name {
   color: #DDDDDD;
@@ -186,7 +195,9 @@ nav {
       -webkit-transition: opacity .25s;
               transition: opacity .25s;
       opacity: .6;
-      padding: .25em; }
+      padding: .25em;
+      -webkit-transition: color .3s;
+              transition: color .3s; }
     nav .nav-list .top-nav {
       padding-top: .5em; }
     nav .nav-list a:hover {

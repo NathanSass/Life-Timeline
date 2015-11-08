@@ -51,12 +51,16 @@ body {
     overflow-x: hidden;
     width: 100vw;
     height: $breaker-height;
+    left: 0;
+    transition: left .3s;
+
   .image-piece {
     height: $breaker-height;
     display: inline-block;
     position: absolute;
     right: 60px;
     transform: skew(4deg, 0deg);
+    transition: right .5s;
   }
   .solid-piece {
     background: $dk-gray;
@@ -73,6 +77,12 @@ body {
     .solid-piece {
       background: #404040;
       box-shadow: -5px 0 23px 1px rgba(119, 119, 119, 0.97);
+    }
+  }
+  &:active {
+    left: 11vw;
+    .image-piece {
+      right: 0px;
     }
   }
 }
@@ -183,7 +193,6 @@ body {
   .desc {
     text-align: left;
     border-bottom: 1px solid #BDBDBD;
-    tra
   }
   &:hover {
     .timeline-image {
