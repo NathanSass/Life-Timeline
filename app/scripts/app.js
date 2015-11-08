@@ -151,14 +151,14 @@
 
   function entryAnimation() {
     Math.round(Math.random()) && $('body').addClass('dark');
-    if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $('body').addClass('animate');
       setTimeout(function(){
         $('body').removeClass('entry-animation');
       }, 1000);
-    } else {
-      $('body').removeClass('entry-animation');
-    }
+    // } else {
+    //   $('body').removeClass('entry-animation');
+    // }
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
