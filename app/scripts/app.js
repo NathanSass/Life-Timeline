@@ -110,10 +110,15 @@
   }
 
   function scrollToTop(el){
+    _makeScrollable();
     var distTop = el.offset().top;
     $('body').animate({
       scrollTop: distTop
     }, 500);
+  }
+
+  function _makeScrollable() {
+    $('body').removeClass('disable-scroll-nav');
   }
 
   function openAllPosts(e){
@@ -156,6 +161,7 @@
   function entryAnimation() {
     Math.round(Math.random()) && $('body').addClass('dark');
     // if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('body').addClass('disable-scroll-nav');
       $('body').addClass('animate'); // Can remove if no more issues with animations on mobile
       setTimeout(function(){
         $('body').removeClass('entry-animation');

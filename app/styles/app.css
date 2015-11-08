@@ -2,9 +2,7 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
-  max-width: 100%;
-  overflow-x: hidden; }
+  height: 100%; }
 
 body {
   background: #fafafa;
@@ -340,3 +338,7 @@ body.dark {
           transform: translateX(75%); }
 .entry-animation.animate footer {
   opacity: 0; }
+
+.disable-scroll-nav {
+  max-width: 100%;
+  overflow-x: hidden; }

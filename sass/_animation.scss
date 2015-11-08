@@ -20,3 +20,8 @@
 		opacity: 0;
 	}
 }
+
+.disable-scroll-nav {
+	max-width: 100%;
+	overflow-x: hidden;
+}
