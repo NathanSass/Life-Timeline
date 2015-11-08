@@ -150,6 +150,7 @@
   }
 
   function entryAnimation() {
+    Math.round(Math.random()) && $('body').addClass('dark');
     if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $('body').addClass('animate');
       setTimeout(function(){
