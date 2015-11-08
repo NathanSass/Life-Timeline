@@ -78,6 +78,13 @@
       desc: 'Experimented with triangles.'
     }
   ];
+
+  var secondPhrases = [
+    'Ran a marathon at 15. Never ran again.',
+    'Got lost in the jungle and spent the night alone.',
+    'About to go to Indonesia.',
+    'Studied Architecture. Quit. Moved to the west coast. Dancing and kayaking.'
+  ];
   
   var ractive = new Ractive({
     el: 'timeline',
@@ -132,10 +139,20 @@
     $('body').toggleClass('dark');
   }
 
+  function changeSecondPhrase() {
+    var randomIndex = Math.floor(Math.random() * (secondPhrases.length + 1));
+    $('.js-second-phrase').html(secondPhrases[randomIndex]);
+  }
+
+  function coolButtonClicked(e) {
+    changeTheme();
+    changeSecondPhrase();
+  }
+
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
   $('.js-blog-mode').on('click', openAllPosts.bind(this));
   $('.timeline-image').on('click', focusImage.bind(this));
-  $('.js-first-breaker-link').on('click', changeTheme.bind(this));
+  $('.js-first-breaker-link').on('click', coolButtonClicked.bind(this));
 
 
   window.Homesite = window.Homesite || {
