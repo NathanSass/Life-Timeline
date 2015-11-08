@@ -150,10 +150,13 @@
   }
 
   function entryAnimation() {
-    setTimeout(function(){
+    if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      setTimeout(function(){
+        $('body').removeClass('entry-animation');
+      }, 1000);
+    } else {
       $('body').removeClass('entry-animation');
-    }, 1000);
-
+    }
   }
 
   $('#timeline').on('click', '.js-age', focusTimelineItem.bind(this));
