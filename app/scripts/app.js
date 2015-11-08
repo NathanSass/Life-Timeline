@@ -69,6 +69,10 @@
       age: '26.1328',
       desc: 'Woke up on a Saturday and wanted to find a fun activity in the best possible weather. So I built a location / weather aggregator to do it. Click <a href="http://nathansass.github.io/adventurePlanner/#/landing">here</a> to check it out'
     },
+    {
+      age: '26.2193',
+      desc: 'I watched the lunar eclipse while overlooking San Francisco and the bay and composed this haiku:<br><br>The Phenomenon<br>A cosmic gift to the sky<br>Our blue Moon eclipsed'
+    },
     { age: '26.2499',
       img:[imagePath+'strawberry_sunrise.jpg'],
       desc: 'Watched the sunrise over a reservoir in the Stanislaus National forest and made some pretty amazing life plans - stay tuned!'
@@ -76,7 +80,7 @@
     { age: '26.3193',
       img:[imagePath+'robert_spout.jpg'],
       desc: 'Experimented with triangles.'
-    }
+    },
   ];
 
   var secondPhrases = [
@@ -152,7 +156,7 @@
   function entryAnimation() {
     Math.round(Math.random()) && $('body').addClass('dark');
     // if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      $('body').addClass('animate');
+      $('body').addClass('animate'); // Can remove if no more issues with animations on mobile
       setTimeout(function(){
         $('body').removeClass('entry-animation');
       }, 1000);
